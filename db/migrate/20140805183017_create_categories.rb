@@ -1,5 +1,9 @@
 class CreateCategories < ActiveRecord::Migration
-  def change
+	def change
+		create_table :categories do |t|
+			t.integer :title
 
-  end
+			t.timestamps null: false		
+		end
+	end
 end
