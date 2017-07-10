@@ -16,6 +16,7 @@ class Cart < ActiveRecord::Base
 			@line_item = LineItem.find_by(:item_id => item_id, :cart_id => self.id)
 		else
 			@line_item = LineItem.new(:item_id => item_id, :cart_id => self.id)
+		#	@line_item.save
 		end
  	end
 end
